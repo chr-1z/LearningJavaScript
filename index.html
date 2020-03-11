@@ -1,24 +1,25 @@
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>Curso Javascript</title>
     </head>
     <body>
-        <script> //javascript
-            function retornaSexo(sexo){
-                // M ou F // Masculino, Feminino
-                // === verifica se a tipagem é igual em um condicional
-                
-                if (sexo == 'M'){
-                    return 'Masculino';
-                } else if (sexo == 'F'){
-                    return 'Feminino';
-                } else {
-                    return 'Outro';
-                }
-            }
+        <div id="app">
+            
+        </div>
+        
+        <script> 
+            var linkElement = document.createElement('a');
+            
+            linkElement.setAttribute('href','http://rocketseat.com.br');
+            linkElement.setAttribute('title','Site da Rocketseat');
 
-            var resultado = retornaSexo('')
-            console.log(resultado);
+            var textElement = document.createTextNode('Acessar site da Rocketseat');
+            linkElement.appendChild(textElement); 
+
+
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(linkElement);
         </script>
     </body>
 </html>
